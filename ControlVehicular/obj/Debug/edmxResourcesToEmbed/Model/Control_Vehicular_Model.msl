@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CONTROL_VEHICULARModelStoreContainer" CdmEntityContainer="CONTROL_VEHICULAR_Entities">
+    <EntitySetMapping Name="CARS_Cars">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_Cars">
+        <MappingFragment StoreEntitySet="CARS_Cars">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+          <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="CirculationCard" ColumnName="CirculationCard" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="SecurityNumber" ColumnName="SecurityNumber" />
+          <ScalarProperty Name="RegisteredIn" ColumnName="RegisteredIn" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARS_ReportsCar">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_ReportsCar">
+        <MappingFragment StoreEntitySet="CARS_ReportsCar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CarId" ColumnName="CarId" />
+          <ScalarProperty Name="ReportTypeId" ColumnName="ReportTypeId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Lights" ColumnName="Lights" />
+          <ScalarProperty Name="QuarterLights" ColumnName="QuarterLights" />
+          <ScalarProperty Name="Antenna" ColumnName="Antenna" />
+          <ScalarProperty Name="RightMirror" ColumnName="RightMirror" />
+          <ScalarProperty Name="LeftMirror" ColumnName="LeftMirror" />
+          <ScalarProperty Name="Crystals" ColumnName="Crystals" />
+          <ScalarProperty Name="Emblem" ColumnName="Emblem" />
+          <ScalarProperty Name="Tires" ColumnName="Tires" />
+          <ScalarProperty Name="Caps" ColumnName="Caps" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="GasolineStopper" ColumnName="GasolineStopper" />
+          <ScalarProperty Name="Dents" ColumnName="Dents" />
+          <ScalarProperty Name="Horn" ColumnName="Horn" />
+          <ScalarProperty Name="DashboardInstruments" ColumnName="DashboardInstruments" />
+          <ScalarProperty Name="Ac" ColumnName="Ac" />
+          <ScalarProperty Name="Windshield" ColumnName="Windshield" />
+          <ScalarProperty Name="Radio" ColumnName="Radio" />
+          <ScalarProperty Name="Speakers" ColumnName="Speakers" />
+          <ScalarProperty Name="Lighter" ColumnName="Lighter" />
+          <ScalarProperty Name="RearviewMirror" ColumnName="RearviewMirror" />
+          <ScalarProperty Name="Ashtray" ColumnName="Ashtray" />
+          <ScalarProperty Name="SeatBelts" ColumnName="SeatBelts" />
+          <ScalarProperty Name="InteriorButtons" ColumnName="InteriorButtons" />
+          <ScalarProperty Name="InteriorHandles" ColumnName="InteriorHandles" />
+          <ScalarProperty Name="Mats" ColumnName="Mats" />
+          <ScalarProperty Name="CarTrim" ColumnName="CarTrim" />
+          <ScalarProperty Name="Jack" ColumnName="Jack" />
+          <ScalarProperty Name="JackHandle" ColumnName="JackHandle" />
+          <ScalarProperty Name="WheelWrench" ColumnName="WheelWrench" />
+          <ScalarProperty Name="ToolKit" ColumnName="ToolKit" />
+          <ScalarProperty Name="ReflectingTriangle" ColumnName="ReflectingTriangle" />
+          <ScalarProperty Name="SpareTire" ColumnName="SpareTire" />
+          <ScalarProperty Name="FireExtinguisher" ColumnName="FireExtinguisher" />
+          <ScalarProperty Name="GasTank" ColumnName="GasTank" />
+          <ScalarProperty Name="Observations" ColumnName="Observations" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="NextService" ColumnName="NextService" />
+          <ScalarProperty Name="LifePilotFrontTire" ColumnName="LifePilotFrontTire" />
+          <ScalarProperty Name="ObservPilotFrontTire" ColumnName="ObservPilotFrontTire" />
+          <ScalarProperty Name="LifePassengerFrontTire" ColumnName="LifePassengerFrontTire" />
+          <ScalarProperty Name="ObservPassengerFrontTire" ColumnName="ObservPassengerFrontTire" />
+          <ScalarProperty Name="LifePilotRearTire" ColumnName="LifePilotRearTire" />
+          <ScalarProperty Name="ObservPilotRearTire" ColumnName="ObservPilotRearTire" />
+          <ScalarProperty Name="LifePassengerRearTire" ColumnName="LifePassengerRearTire" />
+          <ScalarProperty Name="ObservnPassengerRearTire" ColumnName="ObservnPassengerRearTire" />
+          <ScalarProperty Name="LifeExtraTire" ColumnName="LifeExtraTire" />
+          <ScalarProperty Name="ObservExtraTire" ColumnName="ObservExtraTire" />
+          <ScalarProperty Name="GeneralCondition" ColumnName="GeneralCondition" />
+          <ScalarProperty Name="ConditionsTravel" ColumnName="ConditionsTravel" />
+          <ScalarProperty Name="PhotoEvidence" ColumnName="PhotoEvidence" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARS_ReportTypes">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_ReportTypes">
+        <MappingFragment StoreEntitySet="CARS_ReportTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS_Users">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.USERS_Users">
+        <MappingFragment StoreEntitySet="USERS_Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS_UserTypes">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.USERS_UserTypes">
+        <MappingFragment StoreEntitySet="USERS_UserTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CarLoans">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_CarLoans">
+        <MappingFragment StoreEntitySet="View_CarLoans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_LastsLoans">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_LastsLoans">
+        <MappingFragment StoreEntitySet="View_LastsLoans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ServicesMoreSixMonths">
+      <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_ServicesMoreSixMonths">
+        <MappingFragment StoreEntitySet="View_ServicesMoreSixMonths">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CONTROL_VEHICULARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CARS_Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+    <Property Name="Mark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Year" Type="nvarchar" MaxLength="5" />
+    <Property Name="CirculationCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="InsuranceCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecurityNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisteredIn" Type="nvarchar" MaxLength="10" />
+    <Property Name="Available" Type="bit" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModificationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CARS_ReportsCar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarId" Type="int" />
+    <Property Name="ReportTypeId" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Lights" Type="bit" />
+    <Property Name="QuarterLights" Type="bit" />
+    <Property Name="Antenna" Type="bit" />
+    <Property Name="RightMirror" Type="bit" />
+    <Property Name="LeftMirror" Type="bit" />
+    <Property Name="Crystals" Type="bit" />
+    <Property Name="Emblem" Type="bit" />
+    <Property Name="Tires" Type="bit" />
+    <Property Name="Caps" Type="bit" />
+    <Property Name="Views" Type="bit" />
+    <Property Name="GasolineStopper" Type="bit" />
+    <Property Name="Dents" Type="bit" />
+    <Property Name="Horn" Type="bit" />
+    <Property Name="DashboardInstruments" Type="bit" />
+    <Property Name="Ac" Type="bit" />
+    <Property Name="Windshield" Type="bit" />
+    <Property Name="Radio" Type="bit" />
+    <Property Name="Speakers" Type="bit" />
+    <Property Name="Lighter" Type="bit" />
+    <Property Name="RearviewMirror" Type="bit" />
+    <Property Name="Ashtray" Type="bit" />
+    <Property Name="SeatBelts" Type="bit" />
+    <Property Name="InteriorButtons" Type="bit" />
+    <Property Name="InteriorHandles" Type="bit" />
+    <Property Name="Mats" Type="bit" />
+    <Property Name="CarTrim" Type="bit" />
+    <Property Name="Jack" Type="bit" />
+    <Property Name="JackHandle" Type="bit" />
+    <Property Name="WheelWrench" Type="bit" />
+    <Property Name="ToolKit" Type="bit" />
+    <Property Name="ReflectingTriangle" Type="bit" />
+    <Property Name="SpareTire" Type="bit" />
+    <Property Name="FireExtinguisher" Type="bit" />
+    <Property Name="GasTank" Type="nvarchar" MaxLength="50" />
+    <Property Name="Observations" Type="text" />
+    <Property Name="Mileage" Type="nvarchar" MaxLength="50" />
+    <Property Name="NextService" Type="datetime" />
+    <Property Name="LifePilotFrontTire" Type="nvarchar" MaxLength="20" />
+    <Property Name="ObservPilotFrontTire" Type="nvarchar" MaxLength="50" />
+    <Property Name="LifePassengerFrontTire" Type="nvarchar" MaxLength="20" />
+    <Property Name="ObservPassengerFrontTire" Type="nvarchar" MaxLength="50" />
+    <Property Name="LifePilotRearTire" Type="nvarchar" MaxLength="20" />
+    <Property Name="ObservPilotRearTire" Type="nvarchar" MaxLength="50" />
+    <Property Name="LifePassengerRearTire" Type="nvarchar" MaxLength="20" />
+    <Property Name="ObservnPassengerRearTire" Type="nvarchar" MaxLength="50" />
+    <Property Name="LifeExtraTire" Type="nvarchar" MaxLength="20" />
+    <Property Name="ObservExtraTire" Type="nvarchar" MaxLength="50" />
+    <Property Name="GeneralCondition" Type="nvarchar" MaxLength="10" />
+    <Property Name="ConditionsTravel" Type="nvarchar" MaxLength="10" />
+    <Property Name="PhotoEvidence" Type="nvarchar(max)" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModificationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CARS_ReportTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModificationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="USERS_Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="60" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserTypeId" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModificationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="USERS_UserTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModificationDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_CarLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_CarLoans">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="ReportId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_LastsLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_LastsLoans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+    <Property Name="Expr1" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_ServicesMoreSixMonths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_ServicesMoreSixMonths">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Expr1" Type="datetime" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="CONTROL_VEHICULARModelStoreContainer">
+    <EntitySet Name="CARS_Cars" EntityType="Self.CARS_Cars" Schema="dbo" Table="CARS.Cars" store:Type="Tables" />
+    <EntitySet Name="CARS_ReportsCar" EntityType="Self.CARS_ReportsCar" Schema="dbo" Table="CARS.ReportsCar" store:Type="Tables" />
+    <EntitySet Name="CARS_ReportTypes" EntityType="Self.CARS_ReportTypes" Schema="dbo" Table="CARS.ReportTypes" store:Type="Tables" />
+    <EntitySet Name="USERS_Users" EntityType="Self.USERS_Users" Schema="dbo" Table="USERS.Users" store:Type="Tables" />
+    <EntitySet Name="USERS_UserTypes" EntityType="Self.USERS_UserTypes" Schema="dbo" Table="USERS.UserTypes" store:Type="Tables" />
+    <EntitySet Name="View_CarLoans" EntityType="Self.View_CarLoans" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_CarLoans].[Id] AS [Id], 
+    [View_CarLoans].[Assigned] AS [Assigned], 
+    [View_CarLoans].[Model] AS [Model], 
+    [View_CarLoans].[LicencePlate] AS [LicencePlate], 
+    [View_CarLoans].[Date] AS [Date], 
+    [View_CarLoans].[ReportId] AS [ReportId]
+    FROM [dbo].[View_CarLoans] AS [View_CarLoans]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_LastsLoans" EntityType="Self.View_LastsLoans" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_LastsLoans].[Id] AS [Id], 
+    [View_LastsLoans].[Assigned] AS [Assigned], 
+    [View_LastsLoans].[Model] AS [Model], 
+    [View_LastsLoans].[LicencePlate] AS [LicencePlate], 
+    [View_LastsLoans].[Expr1] AS [Expr1]
+    FROM [dbo].[View_LastsLoans] AS [View_LastsLoans]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ServicesMoreSixMonths" EntityType="Self.View_ServicesMoreSixMonths" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_ServicesMoreSixMonths].[Id] AS [Id], 
+    [View_ServicesMoreSixMonths].[Expr1] AS [Expr1], 
+    [View_ServicesMoreSixMonths].[Department] AS [Department], 
+    [View_ServicesMoreSixMonths].[Assigned] AS [Assigned], 
+    [View_ServicesMoreSixMonths].[Model] AS [Model], 
+    [View_ServicesMoreSixMonths].[LicencePlate] AS [LicencePlate]
+    FROM [dbo].[View_ServicesMoreSixMonths] AS [View_ServicesMoreSixMonths]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CONTROL_VEHICULARModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CARS_Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Mark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CirculationCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InsuranceCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegisteredIn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Available" Type="Boolean" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CARS_ReportsCar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="Int32" />
+    <Property Name="ReportTypeId" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Lights" Type="Boolean" />
+    <Property Name="QuarterLights" Type="Boolean" />
+    <Property Name="Antenna" Type="Boolean" />
+    <Property Name="RightMirror" Type="Boolean" />
+    <Property Name="LeftMirror" Type="Boolean" />
+    <Property Name="Crystals" Type="Boolean" />
+    <Property Name="Emblem" Type="Boolean" />
+    <Property Name="Tires" Type="Boolean" />
+    <Property Name="Caps" Type="Boolean" />
+    <Property Name="Views" Type="Boolean" />
+    <Property Name="GasolineStopper" Type="Boolean" />
+    <Property Name="Dents" Type="Boolean" />
+    <Property Name="Horn" Type="Boolean" />
+    <Property Name="DashboardInstruments" Type="Boolean" />
+    <Property Name="Ac" Type="Boolean" />
+    <Property Name="Windshield" Type="Boolean" />
+    <Property Name="Radio" Type="Boolean" />
+    <Property Name="Speakers" Type="Boolean" />
+    <Property Name="Lighter" Type="Boolean" />
+    <Property Name="RearviewMirror" Type="Boolean" />
+    <Property Name="Ashtray" Type="Boolean" />
+    <Property Name="SeatBelts" Type="Boolean" />
+    <Property Name="InteriorButtons" Type="Boolean" />
+    <Property Name="InteriorHandles" Type="Boolean" />
+    <Property Name="Mats" Type="Boolean" />
+    <Property Name="CarTrim" Type="Boolean" />
+    <Property Name="Jack" Type="Boolean" />
+    <Property Name="JackHandle" Type="Boolean" />
+    <Property Name="WheelWrench" Type="Boolean" />
+    <Property Name="ToolKit" Type="Boolean" />
+    <Property Name="ReflectingTriangle" Type="Boolean" />
+    <Property Name="SpareTire" Type="Boolean" />
+    <Property Name="FireExtinguisher" Type="Boolean" />
+    <Property Name="GasTank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Observations" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mileage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NextService" Type="DateTime" Precision="3" />
+    <Property Name="LifePilotFrontTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObservPilotFrontTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LifePassengerFrontTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObservPassengerFrontTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LifePilotRearTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObservPilotRearTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LifePassengerRearTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObservnPassengerRearTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LifeExtraTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObservExtraTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GeneralCondition" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ConditionsTravel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoEvidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CARS_ReportTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="USERS_Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="USERS_UserTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="View_CarLoans">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="ReportId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_LastsLoans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="View_ServicesMoreSixMonths">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Expr1" Type="DateTime" Precision="3" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CONTROL_VEHICULAR_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CARS_Cars" EntityType="Self.CARS_Cars" />
+    <EntitySet Name="CARS_ReportsCar" EntityType="Self.CARS_ReportsCar" />
+    <EntitySet Name="CARS_ReportTypes" EntityType="Self.CARS_ReportTypes" />
+    <EntitySet Name="USERS_Users" EntityType="Self.USERS_Users" />
+    <EntitySet Name="USERS_UserTypes" EntityType="Self.USERS_UserTypes" />
+    <EntitySet Name="View_CarLoans" EntityType="Self.View_CarLoans" />
+    <EntitySet Name="View_LastsLoans" EntityType="Self.View_LastsLoans" />
+    <EntitySet Name="View_ServicesMoreSixMonths" EntityType="Self.View_ServicesMoreSixMonths" />
+  </EntityContainer>
+</Schema>

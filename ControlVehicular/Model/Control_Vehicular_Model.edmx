@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CONTROL_VEHICULARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CARS_Cars">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+          <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+          <Property Name="Mark" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="nvarchar" MaxLength="5" />
+          <Property Name="CirculationCard" Type="nvarchar" MaxLength="50" />
+          <Property Name="InsuranceCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecurityNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegisteredIn" Type="nvarchar" MaxLength="10" />
+          <Property Name="Available" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModificationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CARS_ReportsCar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarId" Type="int" />
+          <Property Name="ReportTypeId" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Lights" Type="bit" />
+          <Property Name="QuarterLights" Type="bit" />
+          <Property Name="Antenna" Type="bit" />
+          <Property Name="RightMirror" Type="bit" />
+          <Property Name="LeftMirror" Type="bit" />
+          <Property Name="Crystals" Type="bit" />
+          <Property Name="Emblem" Type="bit" />
+          <Property Name="Tires" Type="bit" />
+          <Property Name="Caps" Type="bit" />
+          <Property Name="Views" Type="bit" />
+          <Property Name="GasolineStopper" Type="bit" />
+          <Property Name="Dents" Type="bit" />
+          <Property Name="Horn" Type="bit" />
+          <Property Name="DashboardInstruments" Type="bit" />
+          <Property Name="Ac" Type="bit" />
+          <Property Name="Windshield" Type="bit" />
+          <Property Name="Radio" Type="bit" />
+          <Property Name="Speakers" Type="bit" />
+          <Property Name="Lighter" Type="bit" />
+          <Property Name="RearviewMirror" Type="bit" />
+          <Property Name="Ashtray" Type="bit" />
+          <Property Name="SeatBelts" Type="bit" />
+          <Property Name="InteriorButtons" Type="bit" />
+          <Property Name="InteriorHandles" Type="bit" />
+          <Property Name="Mats" Type="bit" />
+          <Property Name="CarTrim" Type="bit" />
+          <Property Name="Jack" Type="bit" />
+          <Property Name="JackHandle" Type="bit" />
+          <Property Name="WheelWrench" Type="bit" />
+          <Property Name="ToolKit" Type="bit" />
+          <Property Name="ReflectingTriangle" Type="bit" />
+          <Property Name="SpareTire" Type="bit" />
+          <Property Name="FireExtinguisher" Type="bit" />
+          <Property Name="GasTank" Type="nvarchar" MaxLength="50" />
+          <Property Name="Observations" Type="text" />
+          <Property Name="Mileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="NextService" Type="datetime" />
+          <Property Name="LifePilotFrontTire" Type="nvarchar" MaxLength="20" />
+          <Property Name="ObservPilotFrontTire" Type="nvarchar" MaxLength="50" />
+          <Property Name="LifePassengerFrontTire" Type="nvarchar" MaxLength="20" />
+          <Property Name="ObservPassengerFrontTire" Type="nvarchar" MaxLength="50" />
+          <Property Name="LifePilotRearTire" Type="nvarchar" MaxLength="20" />
+          <Property Name="ObservPilotRearTire" Type="nvarchar" MaxLength="50" />
+          <Property Name="LifePassengerRearTire" Type="nvarchar" MaxLength="20" />
+          <Property Name="ObservnPassengerRearTire" Type="nvarchar" MaxLength="50" />
+          <Property Name="LifeExtraTire" Type="nvarchar" MaxLength="20" />
+          <Property Name="ObservExtraTire" Type="nvarchar" MaxLength="50" />
+          <Property Name="GeneralCondition" Type="nvarchar" MaxLength="10" />
+          <Property Name="ConditionsTravel" Type="nvarchar" MaxLength="10" />
+          <Property Name="PhotoEvidence" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModificationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CARS_ReportTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModificationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="USERS_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModificationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="USERS_UserTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="text" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModificationDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_CarLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_CarLoans">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ReportId" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ReportId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_LastsLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_LastsLoans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+          <Property Name="Expr1" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CONTROL_VEHICULAR.dbo.View_ServicesMoreSixMonths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_ServicesMoreSixMonths">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Expr1" Type="datetime" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Assigned" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="LicencePlate" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="CONTROL_VEHICULARModelStoreContainer">
+          <EntitySet Name="CARS_Cars" EntityType="Self.CARS_Cars" Schema="dbo" Table="CARS.Cars" store:Type="Tables" />
+          <EntitySet Name="CARS_ReportsCar" EntityType="Self.CARS_ReportsCar" Schema="dbo" Table="CARS.ReportsCar" store:Type="Tables" />
+          <EntitySet Name="CARS_ReportTypes" EntityType="Self.CARS_ReportTypes" Schema="dbo" Table="CARS.ReportTypes" store:Type="Tables" />
+          <EntitySet Name="USERS_Users" EntityType="Self.USERS_Users" Schema="dbo" Table="USERS.Users" store:Type="Tables" />
+          <EntitySet Name="USERS_UserTypes" EntityType="Self.USERS_UserTypes" Schema="dbo" Table="USERS.UserTypes" store:Type="Tables" />
+          <EntitySet Name="View_CarLoans" EntityType="Self.View_CarLoans" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_CarLoans].[Id] AS [Id], 
+    [View_CarLoans].[Assigned] AS [Assigned], 
+    [View_CarLoans].[Model] AS [Model], 
+    [View_CarLoans].[LicencePlate] AS [LicencePlate], 
+    [View_CarLoans].[Date] AS [Date], 
+    [View_CarLoans].[ReportId] AS [ReportId]
+    FROM [dbo].[View_CarLoans] AS [View_CarLoans]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_LastsLoans" EntityType="Self.View_LastsLoans" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_LastsLoans].[Id] AS [Id], 
+    [View_LastsLoans].[Assigned] AS [Assigned], 
+    [View_LastsLoans].[Model] AS [Model], 
+    [View_LastsLoans].[LicencePlate] AS [LicencePlate], 
+    [View_LastsLoans].[Expr1] AS [Expr1]
+    FROM [dbo].[View_LastsLoans] AS [View_LastsLoans]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ServicesMoreSixMonths" EntityType="Self.View_ServicesMoreSixMonths" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_ServicesMoreSixMonths].[Id] AS [Id], 
+    [View_ServicesMoreSixMonths].[Expr1] AS [Expr1], 
+    [View_ServicesMoreSixMonths].[Department] AS [Department], 
+    [View_ServicesMoreSixMonths].[Assigned] AS [Assigned], 
+    [View_ServicesMoreSixMonths].[Model] AS [Model], 
+    [View_ServicesMoreSixMonths].[LicencePlate] AS [LicencePlate]
+    FROM [dbo].[View_ServicesMoreSixMonths] AS [View_ServicesMoreSixMonths]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CONTROL_VEHICULARModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CARS_Cars">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Mark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CirculationCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InsuranceCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegisteredIn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Available" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CARS_ReportsCar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarId" Type="Int32" />
+          <Property Name="ReportTypeId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Lights" Type="Boolean" />
+          <Property Name="QuarterLights" Type="Boolean" />
+          <Property Name="Antenna" Type="Boolean" />
+          <Property Name="RightMirror" Type="Boolean" />
+          <Property Name="LeftMirror" Type="Boolean" />
+          <Property Name="Crystals" Type="Boolean" />
+          <Property Name="Emblem" Type="Boolean" />
+          <Property Name="Tires" Type="Boolean" />
+          <Property Name="Caps" Type="Boolean" />
+          <Property Name="Views" Type="Boolean" />
+          <Property Name="GasolineStopper" Type="Boolean" />
+          <Property Name="Dents" Type="Boolean" />
+          <Property Name="Horn" Type="Boolean" />
+          <Property Name="DashboardInstruments" Type="Boolean" />
+          <Property Name="Ac" Type="Boolean" />
+          <Property Name="Windshield" Type="Boolean" />
+          <Property Name="Radio" Type="Boolean" />
+          <Property Name="Speakers" Type="Boolean" />
+          <Property Name="Lighter" Type="Boolean" />
+          <Property Name="RearviewMirror" Type="Boolean" />
+          <Property Name="Ashtray" Type="Boolean" />
+          <Property Name="SeatBelts" Type="Boolean" />
+          <Property Name="InteriorButtons" Type="Boolean" />
+          <Property Name="InteriorHandles" Type="Boolean" />
+          <Property Name="Mats" Type="Boolean" />
+          <Property Name="CarTrim" Type="Boolean" />
+          <Property Name="Jack" Type="Boolean" />
+          <Property Name="JackHandle" Type="Boolean" />
+          <Property Name="WheelWrench" Type="Boolean" />
+          <Property Name="ToolKit" Type="Boolean" />
+          <Property Name="ReflectingTriangle" Type="Boolean" />
+          <Property Name="SpareTire" Type="Boolean" />
+          <Property Name="FireExtinguisher" Type="Boolean" />
+          <Property Name="GasTank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Observations" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Mileage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NextService" Type="DateTime" Precision="3" />
+          <Property Name="LifePilotFrontTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ObservPilotFrontTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LifePassengerFrontTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ObservPassengerFrontTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LifePilotRearTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ObservPilotRearTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LifePassengerRearTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ObservnPassengerRearTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LifeExtraTire" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ObservExtraTire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GeneralCondition" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ConditionsTravel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PhotoEvidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CARS_ReportTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="USERS_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserTypeId" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="USERS_UserTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="View_CarLoans">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ReportId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="ReportId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_LastsLoans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Expr1" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="View_ServicesMoreSixMonths">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Expr1" Type="DateTime" Precision="3" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Assigned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LicencePlate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CONTROL_VEHICULAR_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CARS_Cars" EntityType="Self.CARS_Cars" />
+          <EntitySet Name="CARS_ReportsCar" EntityType="Self.CARS_ReportsCar" />
+          <EntitySet Name="CARS_ReportTypes" EntityType="Self.CARS_ReportTypes" />
+          <EntitySet Name="USERS_Users" EntityType="Self.USERS_Users" />
+          <EntitySet Name="USERS_UserTypes" EntityType="Self.USERS_UserTypes" />
+          <EntitySet Name="View_CarLoans" EntityType="Self.View_CarLoans" />
+          <EntitySet Name="View_LastsLoans" EntityType="Self.View_LastsLoans" />
+          <EntitySet Name="View_ServicesMoreSixMonths" EntityType="Self.View_ServicesMoreSixMonths" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CONTROL_VEHICULARModelStoreContainer" CdmEntityContainer="CONTROL_VEHICULAR_Entities">
+          <EntitySetMapping Name="CARS_Cars">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_Cars">
+              <MappingFragment StoreEntitySet="CARS_Cars">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+                <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+                <ScalarProperty Name="Mark" ColumnName="Mark" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="CirculationCard" ColumnName="CirculationCard" />
+                <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+                <ScalarProperty Name="SecurityNumber" ColumnName="SecurityNumber" />
+                <ScalarProperty Name="RegisteredIn" ColumnName="RegisteredIn" />
+                <ScalarProperty Name="Available" ColumnName="Available" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARS_ReportsCar">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_ReportsCar">
+              <MappingFragment StoreEntitySet="CARS_ReportsCar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="ReportTypeId" ColumnName="ReportTypeId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Lights" ColumnName="Lights" />
+                <ScalarProperty Name="QuarterLights" ColumnName="QuarterLights" />
+                <ScalarProperty Name="Antenna" ColumnName="Antenna" />
+                <ScalarProperty Name="RightMirror" ColumnName="RightMirror" />
+                <ScalarProperty Name="LeftMirror" ColumnName="LeftMirror" />
+                <ScalarProperty Name="Crystals" ColumnName="Crystals" />
+                <ScalarProperty Name="Emblem" ColumnName="Emblem" />
+                <ScalarProperty Name="Tires" ColumnName="Tires" />
+                <ScalarProperty Name="Caps" ColumnName="Caps" />
+                <ScalarProperty Name="Views" ColumnName="Views" />
+                <ScalarProperty Name="GasolineStopper" ColumnName="GasolineStopper" />
+                <ScalarProperty Name="Dents" ColumnName="Dents" />
+                <ScalarProperty Name="Horn" ColumnName="Horn" />
+                <ScalarProperty Name="DashboardInstruments" ColumnName="DashboardInstruments" />
+                <ScalarProperty Name="Ac" ColumnName="Ac" />
+                <ScalarProperty Name="Windshield" ColumnName="Windshield" />
+                <ScalarProperty Name="Radio" ColumnName="Radio" />
+                <ScalarProperty Name="Speakers" ColumnName="Speakers" />
+                <ScalarProperty Name="Lighter" ColumnName="Lighter" />
+                <ScalarProperty Name="RearviewMirror" ColumnName="RearviewMirror" />
+                <ScalarProperty Name="Ashtray" ColumnName="Ashtray" />
+                <ScalarProperty Name="SeatBelts" ColumnName="SeatBelts" />
+                <ScalarProperty Name="InteriorButtons" ColumnName="InteriorButtons" />
+                <ScalarProperty Name="InteriorHandles" ColumnName="InteriorHandles" />
+                <ScalarProperty Name="Mats" ColumnName="Mats" />
+                <ScalarProperty Name="CarTrim" ColumnName="CarTrim" />
+                <ScalarProperty Name="Jack" ColumnName="Jack" />
+                <ScalarProperty Name="JackHandle" ColumnName="JackHandle" />
+                <ScalarProperty Name="WheelWrench" ColumnName="WheelWrench" />
+                <ScalarProperty Name="ToolKit" ColumnName="ToolKit" />
+                <ScalarProperty Name="ReflectingTriangle" ColumnName="ReflectingTriangle" />
+                <ScalarProperty Name="SpareTire" ColumnName="SpareTire" />
+                <ScalarProperty Name="FireExtinguisher" ColumnName="FireExtinguisher" />
+                <ScalarProperty Name="GasTank" ColumnName="GasTank" />
+                <ScalarProperty Name="Observations" ColumnName="Observations" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="NextService" ColumnName="NextService" />
+                <ScalarProperty Name="LifePilotFrontTire" ColumnName="LifePilotFrontTire" />
+                <ScalarProperty Name="ObservPilotFrontTire" ColumnName="ObservPilotFrontTire" />
+                <ScalarProperty Name="LifePassengerFrontTire" ColumnName="LifePassengerFrontTire" />
+                <ScalarProperty Name="ObservPassengerFrontTire" ColumnName="ObservPassengerFrontTire" />
+                <ScalarProperty Name="LifePilotRearTire" ColumnName="LifePilotRearTire" />
+                <ScalarProperty Name="ObservPilotRearTire" ColumnName="ObservPilotRearTire" />
+                <ScalarProperty Name="LifePassengerRearTire" ColumnName="LifePassengerRearTire" />
+                <ScalarProperty Name="ObservnPassengerRearTire" ColumnName="ObservnPassengerRearTire" />
+                <ScalarProperty Name="LifeExtraTire" ColumnName="LifeExtraTire" />
+                <ScalarProperty Name="ObservExtraTire" ColumnName="ObservExtraTire" />
+                <ScalarProperty Name="GeneralCondition" ColumnName="GeneralCondition" />
+                <ScalarProperty Name="ConditionsTravel" ColumnName="ConditionsTravel" />
+                <ScalarProperty Name="PhotoEvidence" ColumnName="PhotoEvidence" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARS_ReportTypes">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.CARS_ReportTypes">
+              <MappingFragment StoreEntitySet="CARS_ReportTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS_Users">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.USERS_Users">
+              <MappingFragment StoreEntitySet="USERS_Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS_UserTypes">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.USERS_UserTypes">
+              <MappingFragment StoreEntitySet="USERS_UserTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_CarLoans">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_CarLoans">
+              <MappingFragment StoreEntitySet="View_CarLoans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_LastsLoans">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_LastsLoans">
+              <MappingFragment StoreEntitySet="View_LastsLoans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ServicesMoreSixMonths">
+            <EntityTypeMapping TypeName="CONTROL_VEHICULARModel.View_ServicesMoreSixMonths">
+              <MappingFragment StoreEntitySet="View_ServicesMoreSixMonths">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Assigned" ColumnName="Assigned" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
